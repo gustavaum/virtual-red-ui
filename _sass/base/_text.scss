@@ -1,0 +1,39 @@
+// 16 = 1
+// 18 = 1.125
+// 20 = 1.25
+// 24 = 1.5
+// 28 = 1.75
+// 32 = 2
+// 42 = 2.625
+
+
+@mixin text100{
+	font-size: 1em;
+}
+@mixin text200{
+	font-size: 1.125em;
+}
+@mixin text300{
+	font-size: 1.25em;
+}
+@mixin text400{
+	font-size: 1.5em;
+}
+@mixin text500{
+	font-size: 1.75em;
+}
+@mixin text600{
+	font-size: 2em;
+}
+@mixin text700{
+	font-size: 2.625em;
+}
+
+
+.text100{ @include text100; }
+.text200{ @include text200; }
+.text300{ @include text300; }
+.text400{ @include text400; }
+.text500{ @include text500; }
+.text600{ @include text600; }
+.text700{ @include text700; }

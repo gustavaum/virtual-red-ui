@@ -1,0 +1,17 @@
+body{
+	font-family: proxima-nova, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.field .label{
+	color: $red300;
+}
+
+.button.is-primary{
+	// width:100%;
+	// max-width: 15em;
+}
+
+.main-pattern {
+  background: transparent linear-gradient(235deg, $red200 0%, $orange200 51%, $yellow100 100%) 0% 0% no-repeat padding-box;
+}

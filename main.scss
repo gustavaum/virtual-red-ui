@@ -1,0 +1,15 @@
+---
+---
+
+@import "utils/vars";
+@import "utils/mixins";
+
+@import "base/reset";
+@import "base/generic";
+@import "base/text";
+
+@import "layout/card";
+
+body{
+	background-color: $yellow200;
+}
