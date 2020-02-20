@@ -2,7 +2,7 @@
 
 Prototipos com `Jekyll`
 
-##install jekyll
+## install jekyll
 <https://jekyllrb.com/docs/installation/>
 
 ## Run
@@ -12,4 +12,4 @@ jekyll serve --livereload --host=0.0.0.0
 ```
 
 Sass partials dento de `_sass`.
-
+e
