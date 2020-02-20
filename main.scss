@@ -7,8 +7,9 @@
 @import "base/reset";
 @import "base/generic";
 @import "base/text";
+@import "base/shadows";
 
-@import "layout/card";
+@import "components/card";
 
 body{
 	background-color: $yellow200;

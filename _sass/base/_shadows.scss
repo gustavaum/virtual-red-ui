@@ -1,0 +1,7 @@
+@mixin shadow-default {
+    @include box-shadow($top:0, $left:0, $blur:0.5em);    
+}
+
+@mixin shadow-spread {    
+    @include box-shadow($top:0, $left:0, $blur:1.5em, $color: rgba(black, 0.05));
+}
