@@ -1,0 +1,25 @@
+.table {
+  // border-collapse: collapse;
+  // border-spacing: 0;
+  width: 100%;
+
+  & * {
+    // border: 0 !important;
+  }
+  thead {
+    th {
+      background-color: $yellow200;
+      border-bottom: 0;
+      color: $red300;
+    }
+  }
+
+  tbody {
+    @include shadow-table;
+    overflow: hidden;
+
+    td {
+      border-bottom: 0;
+    }
+  }
+}

@@ -1,16 +1,20 @@
 ---
 ---
 
+@import "bulma/bulma";
 @import "utils/vars";
 @import "utils/mixins";
 
 @import "base/reset";
 @import "base/generic";
-@import "base/text";
+@import "base/texts";
+@import "base/colors";
 @import "base/shadows";
 
 @import "components/card";
+@import "components/dashboard";
+@import "components/tabela";
 
-body{
-	background-color: $yellow200;
+body {
+  background-color: $yellow200;
 }

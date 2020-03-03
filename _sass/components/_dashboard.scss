@@ -1,0 +1,146 @@
+.dashboard {
+  &-container {
+  }
+  &-side {
+    background-color: white;
+  }
+  &-menu {
+    button {
+      &:hover {
+      }
+      &.is-active {
+      }
+      & > span {
+      }
+    }
+    .dropdown {
+    }
+  }
+  &-main {
+  }
+  &-nav {
+  }
+  &-usernav {
+  }
+  &-trails {
+    p {
+    }
+  }
+  &-content {
+  }
+  &-footer {
+  }
+}
+
+@include respond-to(768, min) {
+  .dashboard {
+    &-container {
+      display: flex;
+      justify-content: stretch;
+
+      height: 100vh;
+      max-height: 100%;
+      overflow-y: auto;
+
+      background: $yellow200;
+    }
+
+    &-side {
+      @include box-shadow($top: 0, $left: 3px, $blur: 6px);
+      z-index: 9999; // sorry société
+    }
+
+    &-menu {
+      height: calc(100vh - 7em); // viewport height - logo height
+      position: relative;
+      overflow-y: auto;
+
+      button {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        height: 3em;
+        border: 0;
+        color: $gray600;
+        border-left: 4px solid white;
+        @include round-corners(0);
+
+        &:hover {
+          background-color: $gray100;
+          border-left: 4px solid $gray600;
+        }
+
+        &.is-active {
+          background-color: $yellow500;
+          color: $red300 !important;
+          border-left: 4px solid $orange300;
+        }
+
+        & > span {
+          display: flex;
+        }
+      }
+      .dropdown {
+        background-color: $gray100;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    &-main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-nav {
+      background-color: white;
+      height: 7em;
+    }
+
+    &-usernav {
+      height: 4em;
+    }
+
+    &-trails {
+      height: 3rem;
+      background-color: $yellow400;
+      display: flex;
+      align-items: center;
+      p {
+        margin-left: 3em;
+        color: $red300;
+        font-weight: 500;
+      }
+    }
+
+    &-content {
+      padding: 3em;
+      height: 100%;
+      min-height: calc(100vh - 7em - 3em);
+      overflow-y: auto;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3em;
+      background-color: $red100;
+      color: white;
+    }
+  }
+}
+.virtualred-logo {
+  display: block;
+  @include size(16em, 7em);
+  @extend .main-pattern;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

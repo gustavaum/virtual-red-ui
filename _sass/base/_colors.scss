@@ -1,0 +1,25 @@
+
+@mixin orange-gradient {
+  // @include linear-gradient(rgba($cor, $opc), transparent);
+  background: transparent linear-gradient(294deg, $red200 0%, $orange200 55%, $yellow100 100%) 0% 0% no-repeat padding-box;
+}
+
+@mixin pink-gradient {
+  background: transparent linear-gradient(294deg, $pinky200 0%, $pinky100 100%) 0% 0% no-repeat padding-box;
+}
+
+@mixin yellow-gradient {
+  background: transparent linear-gradient(294deg, $orange400 0%, $yellow600 100%) 0% 0% no-repeat padding-box;
+}
+
+.orange-gradient{
+  @include orange-gradient;
+}
+
+.pink-gradient{
+  @include orange-gradient;
+}
+
+.yellow-gradient{
+  @include yellow-gradient;
+}

@@ -1,84 +1,150 @@
+---
+layout: default
+title: Dashboard
+---
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Virtual Red Ui</title>
-	<link rel="stylesheet" href="https://use.typekit.net/tio4cgx.css">
-	<link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasboard</title>
 </head>
 
 <body>
 
-	<h1>Virtual Red Ui</h1>
+  <div class="dashboard">
+    <div class="dashboard-container">
 
-	<article class="card-options">
-		<p class="text600">Acesse a Biblioteca</p>
+      {% include Adminbar.html %}
 
-		<div class="card-options-items">
-			<a href="" class="card-options-item">
-				<figure>
-					<div class="card-options-image">
-						<img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt="" class="card-options-icon">
-						<span class="icon icon-addcircle"></span>
-					</div>
-					<figcaption class="card-options-label">Menu Item</figcaption>
-				</figure>
-			</a>
-			<a href="" class="card-options-item">
-				<figure>
-					<div class="card-options-image">
-						<img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt="" class="card-options-icon">
-						<span class="icon icon-addcircle"></span>
-					</div>
-					<figcaption class="card-options-label">Menu Item</figcaption>
-				</figure>
-			</a>
-			<a href="" class="card-options-item">
-				<figure>
-					<div class="card-options-image">
-						<img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt="" class="card-options-icon">
-						<span class="icon icon-addcircle"></span>
-					</div>
-					<figcaption class="card-options-label">Menu Item</figcaption>
-				</figure>
-			</a>
-			<a href="" class="card-options-item">
-				<figure>
-					<div class="card-options-image">
-						<img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt="" class="card-options-icon">
-						<span class="icon icon-addcircle"></span>
-					</div>
-					<figcaption class="card-options-label">Menu Item</figcaption>
-				</figure>
-			</a>
-			<a href="" class="card-options-item">
-				<figure>
-					<div class="card-options-image">
-						<img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt="" class="card-options-icon">
-						<span class="icon icon-addcircle"></span>
-					</div>
-					<figcaption class="card-options-label">Menu Item</figcaption>
-				</figure>
-			</a>
-		</div><!-- .card-options-items -->
-	</article>
+      <div class="dashboard-main">
+        <div class="dashboard-nav">
+          <section>
+            <nav class="dashboard-usernav">
+              <b-dropdown aria-role="memu">
+                <button class="button" slot="trigger">
+                  <span>{{name}}</span>
+                  <span>{{cargo}}</span>
+                </button>
+                <b-dropdown-item aria-role="memuitem" href="#">Profile</b-dropdown-item>
+                <b-dropdown-item aria-role="memuitem" href="#" v-on:click="logout">
+                  <b-icon class="icon-sair"></b-icon>Sair
+                </b-dropdown-item>
+              </b-dropdown>
 
-	<article class="card-single">
-		<div class="card-single-wrap">
-			<a href="" class="card-single-action">
-				<span class="card-single-header">
-					<img src="" alt="" class="card-single-icon">
-				</span>
-				<span class="card-single-title">
-					<strong>Últimas propostas</strong>
-					Acessar
-				</span>
-			</a>
-		</div>
-	</article>
+              <b-dropdown position="is-bottom-left" aria-role="memu" id="sino">
+                <button class="button" slot="trigger">
+                  <b-icon icon="fas fa-bell"></b-icon>
+                </button>
+                <b-dropdown-item aria-role="memuitem" href="#">
+                  <b-notification
+                    type="is-danger"
+                    aria-close-label="Close notification"
+                    role="alert">Em breve</b-notification>
+                </b-dropdown-item>
+              </b-dropdown>
+            </nav>
+          </section>
+          <div class="dashboard-trails">
+            <p>
+              Olá, seja bem-vindo de volta,
+              <span>{{name}}</span>!
+            </p>
+          </div>
+        </div>
+        <div class="dashboard-content">
+          <div class="columns is-flex is-is-align-stretch">
+            <div class="column is-8 is-gapless">
+              <article class="card-options">
+                <p class="text600">Acesse a Biblioteca</p>
 
+                <div class="card-options-items">
+                  <a href="" class="card-options-item">
+                    <figure>
+                      <div class="card-options-image">
+                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
+                          class="card-options-icon">
+                        <span class="icon icon-addcircle"></span>
+                      </div>
+                      <figcaption class="card-options-label">Menu Item</figcaption>
+                    </figure>
+                  </a>
+                  <a href="" class="card-options-item">
+                    <figure>
+                      <div class="card-options-image">
+                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
+                          class="card-options-icon">
+                        <span class="icon icon-addcircle"></span>
+                      </div>
+                      <figcaption class="card-options-label">Menu Item</figcaption>
+                    </figure>
+                  </a>
+                  <a href="" class="card-options-item">
+                    <figure>
+                      <div class="card-options-image">
+                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
+                          class="card-options-icon">
+                        <span class="icon icon-addcircle"></span>
+                      </div>
+                      <figcaption class="card-options-label">Menu Item</figcaption>
+                    </figure>
+                  </a>
+                  <a href="" class="card-options-item">
+                    <figure>
+                      <div class="card-options-image">
+                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
+                          class="card-options-icon">
+                        <span class="icon icon-addcircle"></span>
+                      </div>
+                      <figcaption class="card-options-label">Menu Item</figcaption>
+                    </figure>
+                  </a>
+                  <a href="" class="card-options-item">
+                    <figure>
+                      <div class="card-options-image">
+                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
+                          class="card-options-icon">
+                        <span class="icon icon-addcircle"></span>
+                      </div>
+                      <figcaption class="card-options-label">Menu Item</figcaption>
+                    </figure>
+                  </a>
+                </div><!-- .card-options-items -->
+              </article>
+            </div>
+            <!-- .columns.is-8 -->
+            <div class="column is-4 is-gapless">
+              <article class="card-single pink-gradient">
+                <div class="card-single-wrap">
+                  <a href="" class="card-single-action">
+                    <span class="card-single-header">
+                      <img src="" alt="" class="card-single-icon">
+                    </span>
+                    <span class="card-single-title">
+                      <strong>Últimas propostas</strong>
+                      Acessar
+                    </span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!-- dashboard-content -->
+        <footer class="dashboard-footer">
+          <div class="content has-text-centered">
+            <p>
+              <font color="white">© 2019 Virtual Red - Todos os direitos reservados.</font>
+            </p>
+          </div>
+        </footer>
+      </div>
+      <!-- .dashboard-main -->
+    </div>
+    <!-- .dashboard-container -->
+  </div>
+  <!-- .dashboard -->
 
 </body>
 
