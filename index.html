@@ -54,80 +54,20 @@ title: Dashboard
           </div>
         </div>
         <div class="dashboard-content">
-          <div class="columns is-flex is-is-align-stretch">
-            <div class="column is-8 is-gapless">
-              <article class="card-options">
-                <p class="text600">Acesse a Biblioteca</p>
-
-                <div class="card-options-items">
-                  <a href="" class="card-options-item">
-                    <figure>
-                      <div class="card-options-image">
-                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
-                          class="card-options-icon">
-                        <span class="icon icon-addcircle"></span>
-                      </div>
-                      <figcaption class="card-options-label">Menu Item</figcaption>
-                    </figure>
-                  </a>
-                  <a href="" class="card-options-item">
-                    <figure>
-                      <div class="card-options-image">
-                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
-                          class="card-options-icon">
-                        <span class="icon icon-addcircle"></span>
-                      </div>
-                      <figcaption class="card-options-label">Menu Item</figcaption>
-                    </figure>
-                  </a>
-                  <a href="" class="card-options-item">
-                    <figure>
-                      <div class="card-options-image">
-                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
-                          class="card-options-icon">
-                        <span class="icon icon-addcircle"></span>
-                      </div>
-                      <figcaption class="card-options-label">Menu Item</figcaption>
-                    </figure>
-                  </a>
-                  <a href="" class="card-options-item">
-                    <figure>
-                      <div class="card-options-image">
-                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
-                          class="card-options-icon">
-                        <span class="icon icon-addcircle"></span>
-                      </div>
-                      <figcaption class="card-options-label">Menu Item</figcaption>
-                    </figure>
-                  </a>
-                  <a href="" class="card-options-item">
-                    <figure>
-                      <div class="card-options-image">
-                        <img src="https://app.virtualred.com.br/img/videoaulas.43ce2f8d.svg" alt=""
-                          class="card-options-icon">
-                        <span class="icon icon-addcircle"></span>
-                      </div>
-                      <figcaption class="card-options-label">Menu Item</figcaption>
-                    </figure>
-                  </a>
-                </div><!-- .card-options-items -->
-              </article>
+          <div class="columns is-gapless">
+            <div class="column">
+              {% include card-options.html %}
             </div>
             <!-- .columns.is-8 -->
-            <div class="column is-4 is-gapless">
-              <article class="card-single pink-gradient">
-                <div class="card-single-wrap">
-                  <a href="" class="card-single-action">
-                    <span class="card-single-header">
-                      <img src="" alt="" class="card-single-icon">
-                    </span>
-                    <span class="card-single-title">
-                      <strong>Últimas propostas</strong>
-                      Acessar
-                    </span>
-                  </a>
-                </div>
-              </article>
+            <div class="column">
+              <div class="spacing">
+                {% include card-single.html %}
+              </div>
+            </div>
+          </div>
+          <div class="columns is-gapless">
+            <div class="column">
+              {% include tabela.html %}
             </div>
           </div>
         </div>
@@ -135,7 +75,7 @@ title: Dashboard
         <footer class="dashboard-footer">
           <div class="content has-text-centered">
             <p>
-              <font color="white">© 2019 Virtual Red - Todos os direitos reservados.</font>
+              © 2019 Virtual Red - Todos os direitos reservados.
             </p>
           </div>
         </footer>

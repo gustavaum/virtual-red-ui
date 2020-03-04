@@ -24,3 +24,7 @@ body {
 button.is-round {
   @include round-corners(50%);
 }
+
+.spacing {
+  padding: 0 1em;
+}

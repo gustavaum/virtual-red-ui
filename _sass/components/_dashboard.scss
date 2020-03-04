@@ -1,8 +1,12 @@
 .dashboard {
   &-container {
+    display: flex;
+    flex-direction: column;
+    background: $yellow200;
   }
   &-side {
     background-color: white;
+    // display: none;
   }
   &-menu {
     button {
@@ -29,20 +33,24 @@
   &-content {
   }
   &-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    background-color: $red100;
+    color: white;
   }
 }
 
 @include respond-to(768, min) {
   .dashboard {
     &-container {
-      display: flex;
       justify-content: stretch;
+      flex-direction: row;
 
       height: 100vh;
       max-height: 100%;
       overflow-y: auto;
-
-      background: $yellow200;
     }
 
     &-side {
@@ -126,12 +134,6 @@
     }
 
     &-footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 3em;
-      background-color: $red100;
-      color: white;
     }
   }
 }

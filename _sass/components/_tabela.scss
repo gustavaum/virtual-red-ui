@@ -16,6 +16,7 @@
 
   tbody {
     @include shadow-table;
+    @include round-corners(1em);
     overflow: hidden;
 
     td {

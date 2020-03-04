@@ -7,6 +7,6 @@
 }
 
 @mixin shadow-table {
-  @include round-corners(1em);
+  @include box-shadow($top: 0, $left: 0, $blur: 1.5em, $color: rgba(black, 0.05));
   box-shadow: 0 3px 10px 3px rgba(black, 0.1);
 }
